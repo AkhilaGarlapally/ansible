@@ -7,3 +7,4 @@
      template:
         src:  nginx.conf
         dest: /etc/nginx/nginx.conf
+     check_mode: yes
