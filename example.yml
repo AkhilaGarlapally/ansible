@@ -1,8 +1,14 @@
 ---
-- name: Hello World!
+- name: Network Getting Started First Playbook
   hosts: all
-
+  become: true
   tasks:
 
-  - name: Hello World!
-    shell: echo "Hi! Tower is working!"
+      - name: ensure apache is at the latest version
+        yum:
+          name: httpd
+          state: latest
+      - name: ensure apache is running
+        service:
+          name: httpd
+          state: started
