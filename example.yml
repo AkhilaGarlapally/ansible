@@ -5,5 +5,5 @@
   tasks:
    - name: Check diff
      template:
-        src: /home/ansible/nginx.conf
+        src: /var/lib/awx/venv/ansible/nginx.conf
         dest: /etc/nginx/nginx.conf
