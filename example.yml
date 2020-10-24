@@ -1,6 +1,6 @@
 ---
 - name: check configuration
-  hosts: aws
+  hosts: all
   become: true
   tasks:
    - name: Check diff
