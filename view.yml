@@ -6,8 +6,6 @@
    - name: Get nginx content
      shell: cat /etc/nginx/nginx.conf
      register: data
-     args:
-       warn: false
 
    - debug:
        msg: "{{ data.stdout_lines }}"
