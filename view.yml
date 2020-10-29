@@ -1,9 +1,11 @@
-hosts: all
-become: true
-tasks: 
- - name: Get nginx content
-   shell: cat /etc/nginx/nginx.conf
-   register: data
+---
+- name: view configuration of both remote server nginx file
+  hosts: all
+  become: true
+  tasks:
+   - name: Get nginx content
+     shell: cat /etc/nginx/nginx.conf
+     register: data
 
- - debug:
-     msg: "{{ data.stdout }}"
+   - debug:
+       msg: "{{ data.stdout }}"
