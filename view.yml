@@ -1,0 +1,6 @@
+- name: Get nginx content
+  shell: cat /etc/nginx/nginx.conf
+  register: data
+
+- debug:
+    msg: "{{ data.stdout }}"
