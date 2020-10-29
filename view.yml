@@ -1,6 +1,6 @@
 ---
 - name: view configuration of both remote server nginx file
-  hosts: all
+  hosts: ll
   become: true
   tasks:
    - name: Get nginx content
