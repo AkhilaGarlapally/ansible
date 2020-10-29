@@ -8,4 +8,4 @@
      register: data
 
    - debug:
-       msg: "{{ data.stdout }}"
+       msg: "{{ data.stdout_lines }}"
